@@ -66,7 +66,7 @@ class GeneralCommands():
     @commands.command(description='Poke DiscoBot, yay!')
     async def poke(self):
         """Poke DiscoBot, yay!"""
-        await self.bot.say(random.choice(self.c))
+        await self.bot.say(random.choice(self.replies))
 
     @commands.command(description='Ask the admins', pass_context=True)
     async def ask(self, ctx, *question):

@@ -48,8 +48,7 @@ class GeneralCommands():
     @commands.command()
     async def slap(self, member : discord.Member):
         """<member>: Be careful with this one."""
-        await self.bot.say("*slaps {0} around a bit with \
-                            a large, girthy trout*".format(member))
+        await self.bot.say("*slaps {0} around a bit with a large, girthy trout*".format(member))
 
     @commands.command(pass_context=True)
     async def lapdance(self, ctx):

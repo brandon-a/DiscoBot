@@ -19,10 +19,9 @@ async def on_ready():
 
 @bot.event
 async def on_member_join(member):
+    pm = 'Welcome to the gaymers discord! \n type \'!help\' to see how I work. \n If you have any questions, pm the admins!'
     await bot.send_message(member.server, 'Welcome {0}!'.format(member))
-    await bot.send_message(member, 'Welcome to the gaymers discord! \
-                                    type \'!help\' to see how I work. \
-                                    If you have any questions, pm the admins!')
+    await bot.send_message(member, pm)
 
 def setup(bot):
     bot.add_cog(general.GeneralCommands(bot))

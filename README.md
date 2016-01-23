@@ -15,12 +15,12 @@ FunCommands:
   slap      <member>: Be careful with this one.
 GeneralCommands:
   roll      <n>d<m>: Roll dice with m sides n times.
-  who       More info on DiscoBot
+  who       More info on DiscoBot.
   joined    <member>: Check when a member joined.
   choose    <c1> <c2> ...: Let DiscoBot choose for you!
-  ask       <question>: Ask the admins, by PM to DiscoBot
+  ask       <question>: Ask the admins, by PM to DiscoBot.
 RegionCommands:
-  setregion <region>: Set your region, for more help type'!regions'
+  setregion <region>: Set your region, for more help type'!regions'.
   regions   Display all possible regions.
 ​No Category:
   help      Shows this message.

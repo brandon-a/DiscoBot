@@ -9,8 +9,8 @@
   "modules": ["general", "regions", "fun"],
 
   "general": {
-    "ask_server": "Gaymers",
-    "ask_channel": "questions"
+    "ask_server": "",
+    "ask_channel": ""
   },
 
   "regions": {

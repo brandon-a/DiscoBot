@@ -39,7 +39,10 @@ def timedelta_str(dt):
     days = dt.days
     hours, r = divmod(dt.seconds, 3600)
     minutes, _ = divmod(r, 60)
-    return '{0} days, {1} hours and {2} minutes'.format(days, hours, minutes)
+    if minutes == 1:
+        return '{0} days, {1} hours and {2} minute'.format(days, hours, minutes)
+    else:
+        return '{0} days, {1} hours and {2} minutes'.format(days, hours, minutes)
 
 def setup(bot, config):
     if 'general' in config['modules']:

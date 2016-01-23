@@ -10,21 +10,21 @@ I'm DiscoBot, a simple discord bot!
 Command prefix: !
 
 FunCommands:
+  poke      Poke DiscoBot, yay!
   lapdance  Request a lapdance.
   slap      <member>: Be careful with this one.
-  poke      Poke DiscoBot, yay!
 GeneralCommands:
+  roll      <n>d<m>: Roll dice with m sides n times.
   who       More info on DiscoBot
   joined    <member>: Check when a member joined.
-  ask       <question>: Ask the admins, either on the server or by PM to [...]
   choose    <c1> <c2> ...: Let DiscoBot choose for you!
-  roll      <n>d<m>: Roll dice with m sides n times.
+  ask       <question>: Ask the admins, by PM to DiscoBot
 RegionCommands:
-  regions   Display region message.
   setregion <region>: Set your region, for more help type'!regions'
+  regions   Display all possible regions.
 ​No Category:
-  uptime    Check uptime.
   help      Shows this message.
+  uptime    Check uptime.
 
 Type !help command for more info on a command.
 You can also type !help category for more info on a category.

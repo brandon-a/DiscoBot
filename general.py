@@ -40,7 +40,7 @@ class GeneralCommands():
 
     @commands.command(description='Ask the admins', pass_context=True)
     async def ask(self, ctx, *question):
-        """<question>: Ask the admins, either on the server or by PM to DiscoBot"""
+        """<question>: Ask the admins, by PM to DiscoBot."""
         question = ' '.join(question)
         if len(question) < 3:
             return

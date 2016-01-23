@@ -12,7 +12,7 @@ class RegionCommands():
 
     @commands.command(description='Display region message.')
     async def regions(self):
-        """Display region message."""
+        """Display all possible regions."""
         msg = "To set or change your region, type '!setregion <region>' \n"
         msg +='Possible regions: '
         msg += ', '.join(self.all_regions)
@@ -20,7 +20,7 @@ class RegionCommands():
 
     @commands.command(description='Set your region', pass_context=True)
     async def setregion(self, ctx, *region : str):
-        """<region>: Set your region, for more help type'!regions'"""
+        """<region>: Set your region, for more help type'!regions'."""
         if ctx.message.server:
             region = ' '.join(region)
             if region in self.all_regions:

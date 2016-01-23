@@ -6,11 +6,9 @@ class RegionCommands():
     Region commands for DiscoBot
     """
 
-    all_regions = ["North America", "Europe", "Oceania",
-                   "Asia", "Africa", "South America"]
-
-    def __init__(self, bot):
+    def __init__(self, bot, config):
         self.bot = bot
+        self.all_regions = config['all_regions']
 
     @commands.command(description='Display region message.')
     async def regions(self):

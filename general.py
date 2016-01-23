@@ -8,16 +8,9 @@ class GeneralCommands():
     General commands for DiscoBot.
     """
 
-    # Replies for the !poke command (we need A LOT more)
-    replies = ['STOP TOUCHING ME!', 'LEAVE ME ALONE', 'can I go home now?',
-               'It\'s dark in here..', 'AAAAAAAAAAAAH', 'NO', '*giggles*',
-               '*moans*', ';)', ':(', 'h-hello?', '*pokes back*', 'D: not there!',
-               'A bit lower...', 'WHAT DO YOU WANT?!', 'bleep', 'Well hello there ;)',
-               '*blush* not now! everybody is watching..', '*falls over*', '*winks*',
-               'N-nani']
-
-    def __init__(self, bot):
+    def __init__(self, bot, config):
         self.bot = bot
+        self.ask_loc = [config['ask_server'], config['ask_channel']]
 
     @commands.command(description='Roll dice with m sides n times. format: <n>d<m>')
     async def roll(self, dice : str):
@@ -45,28 +38,6 @@ class GeneralCommands():
         await self.bot.say('{0.name} joined at {1}'.format(member,
                                         member.joined_at.strftime("%Y-%m-%d")))
 
-    @commands.command()
-    async def slap(self, member : discord.Member):
-        """<member>: Be careful with this one."""
-        await self.bot.say("*slaps {0} around a bit with a large, girthy trout*".format(member))
-
-    @commands.command(pass_context=True)
-    async def lapdance(self, ctx):
-        """Request a lapdance."""
-        if ctx.message.server:
-            if is_admin(ctx.message.author):
-                await self.bot.say('*gives {0} a sexy lapdance*'\
-                                    .format(ctx.message.author))
-            else:
-                await self.bot.say('NO!')
-        else:
-            await self.bot.say('I don\'t give private lapdances, you freak!')
-
-    @commands.command(description='Poke DiscoBot, yay!')
-    async def poke(self):
-        """Poke DiscoBot, yay!"""
-        await self.bot.say(random.choice(self.replies))
-
     @commands.command(description='Ask the admins', pass_context=True)
     async def ask(self, ctx, *question):
         """<question>: Ask the admins, either on the server or by PM to DiscoBot"""
@@ -74,8 +45,16 @@ class GeneralCommands():
         if len(question) < 3:
             return
         author = ctx.message.author
-        q_channel = get_channel(self.bot, 'Gaymers', 'questions')
+        q_channel = get_channel(self.bot, self.ask_loc[0], self.ask_loc[1])
         if q_channel:
             print('q')
             await self.bot.send_message(q_channel,
                                     "{0}: {1}".format(author, question))
+
+    @commands.command(description='A short DiscoBot description.')
+    async def who(self):
+        """More info on DiscoBot"""
+        msg = '''Hi I'm Discobot, a Discord bot made with discord.py!
+        For more info about me, visit https://github.com/Superbanaan/DiscoBot
+        '''
+        await self.bot.say(msg)

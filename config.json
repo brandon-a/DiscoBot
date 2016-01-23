@@ -1,0 +1,20 @@
+{
+  "credentials": {
+    "email": "",
+    "password": ""
+  },
+
+  "prefix": "!",
+
+  "modules": ["general", "regions", "fun"],
+
+  "general": {
+    "ask_server": "Gaymers",
+    "ask_channel": "questions"
+  },
+
+  "regions": {
+    "all_regions": ["North America", "Europe", "Oceania", "Asia", "Africa", "South America"]
+  }
+
+}

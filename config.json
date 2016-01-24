@@ -6,7 +6,7 @@
 
   "prefix": "!",
 
-  "modules": ["general", "regions", "fun"],
+  "modules": ["general", "regions", "actions"],
 
   "general": {
     "ask_server": "",

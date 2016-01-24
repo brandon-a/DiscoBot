@@ -1,11 +1,11 @@
-import discord
-from discord.ext import commands
 import random
 import datetime
 import json
+import discord
+from discord.ext import commands
 import general
 import regions
-import fun
+import actions
 
 with open('config.json', 'r') as c_json:
     config = json.load(c_json)
@@ -49,8 +49,8 @@ def setup(bot, config):
         bot.add_cog(general.GeneralCommands(bot, config['general']))
     if 'regions' in config['modules']:
         bot.add_cog(regions.RegionCommands(bot, config['regions']))
-    if 'fun' in config['modules']:
-        bot.add_cog(fun.FunCommands(bot))
+    if 'actions' in config['modules']:
+        bot.add_cog(actions.Actions(bot))
 
 setup(bot, config)
 bot.run(config['credentials']['email'], config['credentials']['password'])

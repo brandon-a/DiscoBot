@@ -3,7 +3,7 @@ import random
 from discord.ext import commands
 from utils import *
 
-class FunCommands():
+class Actions():
     # Replies for the !poke command (we need A LOT more)
     poke_replies = ['STOP TOUCHING ME!', 'LEAVE ME ALONE', 'can I go home now?',
                'It\'s dark in here..', 'AAAAAAAAAAAAH', 'NO', '*giggles*',

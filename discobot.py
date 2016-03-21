@@ -25,7 +25,7 @@ async def on_ready():
 
 @bot.event
 async def on_member_join(member):
-    pm = 'Welcome to {0}!\ntype \'!help\' to see how I work.\nIf you have any questions, pm the admins!'.format(member.server)
+    pm = 'Welcome to {0}!\ntype \'!help\' to see how I work.\nTo set your region type !regions in any channel on the server.\nTo gain access to the #over-18 channel, type !set18 in any channel on the server.\nIf you have any questions, use the !ask command or PM one of the admins.'.format(member.server)
     await bot.send_message(member.server, 'Welcome {0}!'.format(member))
     await bot.send_message(member, pm)
 

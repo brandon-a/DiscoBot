@@ -58,3 +58,26 @@ class GeneralCommands():
         For more info about me, visit https://github.com/Superbanaan/DiscoBot
         '''
         await self.bot.say(msg)
+
+    @commands.command(description='set permission for 18+', pass_context=True)
+    async def set18(self, ctx):
+        """Set your access to the over-18 channel."""
+        if ctx.message.server:
+            author = ctx.message.author
+            role = discord.utils.get(ctx.message.server.roles, name="18+")
+            await self.bot.add_roles(author, role)
+        else:
+            await self.bot.say('I can\'t set permissions in a DM! You must use the command on the server!')
+
+    @commands.command(description='remove permission for 18+', pass_context=True)
+    async def unset18(self, ctx):
+        """Revoke your access to the over-18 channel."""
+        author = ctx.message.author
+        role = discord.utils.get(ctx.message.server.roles, name="18+")
+        await self.bot.remove_roles(author, role)    
+        
+    #@commands.command(description='Get the user ID of a user.', pass_context=True)
+    #async def getID(self, user : discord.User):
+    #    """Get the permanant user ID for a certain user."""
+    #    await self.bot.say('{0} user ID is {0.getID}'.format(user))
+

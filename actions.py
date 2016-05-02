@@ -14,6 +14,7 @@ class Actions():
     hug_replies = ['*hugs {0}*', '*hugs {0}*', '*hugs {0}*', '*hugs {0}*',
                    '*licks {0}*', '*pounces {0}*', '*jumps on {0}*',
                    '*glomps {0}*', '*falls on {0}*']
+    slap_replies = ['*slaps {0} around a bit with a large, girthy trout*', '*slaps {0} with a meaty sausage*']               
 
     def __init__(self, bot):
         self.bot = bot
@@ -27,6 +28,16 @@ class Actions():
     async def slap(self, member : discord.Member):
         """<member>: Be careful with this one."""
         await self.bot.say("*slaps {0} around a bit with a large, girthy trout*".format(member))
+
+    #@commands.command()
+    #async def slap(self, member : discord.Member):
+    #     """<member>: Be careful with this one."""
+    #    await self.bot.say(random.choice(self.slap_replies).format(member))    
+
+    @commands.command()
+    async def spray(self, member : discord.Member):
+        """<member>: Be careful with this one."""
+        await self.bot.say("*sprays {0} with the fire hose*".format(member))    
 
     @commands.command()
     async def hug(self, member : discord.Member):

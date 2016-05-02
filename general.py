@@ -66,6 +66,7 @@ class GeneralCommands():
             author = ctx.message.author
             role = discord.utils.get(ctx.message.server.roles, name="18+")
             await self.bot.add_roles(author, role)
+            await self.bot.say('Access to #over-18 granted.')
         else:
             await self.bot.say('I can\'t set permissions in a DM! You must use the command on the server!')
 
@@ -74,10 +75,25 @@ class GeneralCommands():
         """Revoke your access to the over-18 channel."""
         author = ctx.message.author
         role = discord.utils.get(ctx.message.server.roles, name="18+")
-        await self.bot.remove_roles(author, role)    
-        
-    #@commands.command(description='Get the user ID of a user.', pass_context=True)
-    #async def getID(self, user : discord.User):
-    #    """Get the permanant user ID for a certain user."""
-    #    await self.bot.say('{0} user ID is {0.getID}'.format(user))
+        await self.bot.remove_roles(author, role)
+        await self.bot.say('Access to #over-18 revoked.')
+
+    @commands.command(description='get the League of Legends role', pass_context=True)
+    async def setlol(self, ctx):
+        """Get the league of legends role to get notified when people want to play."""
+        if ctx.message.server:
+            author = ctx.message.author
+            role = discord.utils.get(ctx.message.server.roles, name="League of Legends")
+            await self.bot.add_roles(author, role)
+            await self.bot.say('League of Legends role applied.')
+        else:
+            await self.bot.say('I can\'t set permissions in a DM! You must use the command on the server!')
+
+    @commands.command(description='remove the League of Legends role', pass_context=True)
+    async def unsetlol(self, ctx):
+        """Remove the League of Legends role and stop receiving notifications."""
+        author = ctx.message.author
+        role = discord.utils.get(ctx.message.server.roles, name="League of Legends")
+        await self.bot.remove_roles(author, role)
+        await self.bot.say('League of Legends role removed.')
 

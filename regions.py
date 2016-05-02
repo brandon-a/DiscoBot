@@ -32,5 +32,6 @@ class RegionCommands():
                 if d_role:
                     new_roles.append(d_role)
                 await self.bot.replace_roles(author, *new_roles)
+                await self.bot.say('Region set successfully.')
         else:
             await self.bot.say('I cannot set your region here!')

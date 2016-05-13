@@ -13,7 +13,7 @@ class RegionCommands():
     @commands.command(description='Display region message.')
     async def regions(self):
         """Display all possible regions."""
-        msg = "To set or change your region, type '!setregion <region>' \n"
+        msg = "To set or change your region, type '!setregion region' \n"
         msg +='Possible regions: '
         msg += ', '.join(self.all_regions)
         await self.bot.say(msg)

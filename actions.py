@@ -29,10 +29,10 @@ class Actions():
         """<member>: Be careful with this one."""
         await self.bot.say("*slaps {0} around a bit with a large, girthy trout*".format(member))
 
-    #@commands.command()
-    #async def slap(self, member : discord.Member):
-    #     """<member>: Be careful with this one."""
-    #    await self.bot.say(random.choice(self.slap_replies).format(member))    
+    @commands.command()
+    async def spay(self, member : discord.Member):
+        """<member>: Be careful with this one."""
+        await self.bot.say("*spays {0} with a rusty and ineffective scissor*".format(member))
 
     @commands.command()
     async def spray(self, member : discord.Member):

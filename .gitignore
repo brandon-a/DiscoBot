@@ -1,2 +1,4 @@
 __pycache__/actions.cpython-35.pyc
 *.pyc
+.idea/DiscoBot.iml
+*.xml

@@ -15,7 +15,7 @@ class Actions():
                    '*licks {0}*', '*pounces {0}*', '*jumps on {0}*',
                    '*glomps {0}*', '*falls on {0}*', '*bear hugs {0}*',
                    '*tightly squeezes {0}*', '*embraces {0}*', '*holds {0} close*',
-                   '*cuddles {0}*', '*takes {0} into his arems*']
+                   '*cuddles {0}*', '*takes {0} into his arms*']
     slap_replies = ['*slaps {0} around a bit with a large, girthy trout*', '*slaps {0} with a meaty sausage*',
                     '*slaps {0} with a massive bag of spaghetti*', '*slaps {0} with a sizable brat*']               
 

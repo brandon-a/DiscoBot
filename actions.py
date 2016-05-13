@@ -10,11 +10,14 @@ class Actions():
                '*moans*', ';)', ':(', 'h-hello?', '*pokes back*', 'D: not there!',
                'A bit lower...', 'WHAT DO YOU WANT?!', 'bleep', 'Well hello there ;)',
                '*blush* not now! everybody is watching..', '*falls over*', '*winks*',
-               'N-nani']
+               'N-nani', 'Don\'t stop there.', 'More please ;)', 'Only one finger?', 'Come here ;)']
     hug_replies = ['*hugs {0}*', '*hugs {0}*', '*hugs {0}*', '*hugs {0}*',
                    '*licks {0}*', '*pounces {0}*', '*jumps on {0}*',
-                   '*glomps {0}*', '*falls on {0}*']
-    slap_replies = ['*slaps {0} around a bit with a large, girthy trout*', '*slaps {0} with a meaty sausage*']               
+                   '*glomps {0}*', '*falls on {0}*', '*bear hugs {0}*',
+                   '*tightly squeezes {0}*', '*embraces {0}*', '*holds {0} close*',
+                   '*cuddles {0}*', '*takes {0} into his arems*']
+    slap_replies = ['*slaps {0} around a bit with a large, girthy trout*', '*slaps {0} with a meaty sausage*',
+                    '*slaps {0} with a massive bag of spaghetti*', '*slaps {0} with a sizable brat*']               
 
     def __init__(self, bot):
         self.bot = bot
